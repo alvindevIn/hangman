@@ -269,7 +269,8 @@ const initializer = () => {
     if (charArray.includes(" ")) {
       charArray.forEach((char, index) => {
         if (char === " ") {
-          dashes[index].innerText = " ";
+          dashes[index].innerText = "-";
+          dashes[index].style.opacity = "0"; // Add this line to set opacity to 0
           winCount += 1;
           if (winCount == charArray.length) {
             resultText.innerHTML = `<h2 class='win-msg'>Kamu Menang!!</h2><p>kata yang benar yaitu <span>${chosenWord}</span></p>`;
@@ -377,3 +378,4 @@ newGameButton.addEventListener("click", initializer);
 window.onload = initializer;
 window.onload = initializer;
 window.onload = initializer;
+
