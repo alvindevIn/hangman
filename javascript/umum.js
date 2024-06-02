@@ -136,13 +136,17 @@ const blocker = () => {
 
 //Word Generator
 const generateWord = (optionValue) => {
-  let optionsButtons = document.querySelectorAll(".options");
-  //If optionValur matches the button innerText then highlight the button
-  optionsButtons.forEach((button) => {
-    if (button.innerText.toLowerCase() === optionValue) {
-      button.classList.add("active");
-    }
-    button.disabled = true;
+  const audio = new Audio('res/select.mp3');
+    audio.play();
+    setTimeout(function() {  
+      let optionsButtons = document.querySelectorAll(".options");
+      //If optionValur matches the button innerText then highlight the button
+      optionsButtons.forEach((button) => {
+        if (button.innerText.toLowerCase() === optionValue) {
+          button.classList.add("active");
+        }
+        button.disabled = true;
+    }, 300);
   });
 
   //initially hide letters, clear previous word
@@ -323,7 +327,12 @@ const drawMan = (count) => {
 };
 
 //New Game
-newGameButton.addEventListener("click", initializer);
-window.onload = initializer;
-window.onload = initializer;
+newGameButton.addEventListener("click", () => {
+  setTimeout(() => {
+    initializer();
+  }, 300);
+  const audio = new Audio('res/select.mp3');
+  audio.play();
+});
+
 window.onload = initializer;
