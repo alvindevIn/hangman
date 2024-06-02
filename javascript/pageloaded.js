@@ -7,7 +7,7 @@ toUmum.addEventListener('click', function() {
     audio.play();
     setTimeout(function() {
         window.location.href = 'umum.html';
-    }, 300);
+    }, 500);
 })
 toKnowledge.addEventListener('click', function() {
     window.location.href = 'knowledge.html'
