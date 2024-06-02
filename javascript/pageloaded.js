@@ -3,7 +3,11 @@ const toKnowledge = document.getElementById('toKnowledge');
 const toKocak = document.getElementById('toKocak');
 
 toUmum.addEventListener('click', function() {
-    window.location.href = 'umum.html'
+    const audio = new Audio('res/select.mp3');
+    audio.play();
+    setTimeout(function() {
+        window.location.href = 'umum.html';
+    }, 300);
 })
 toKnowledge.addEventListener('click', function() {
     window.location.href = 'knowledge.html'
